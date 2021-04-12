@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .col:nth-child(n) {
+            border: 1px solid rgb(67, 6, 117);
+            margin-bottom: 20px;
+            padding: 10px;
+            padding: 0 10px 10px 10px;
+        }
+
+        .col:nth-child(2n) {
+            border: 1px solid red;
+            margin-bottom: 20px;
+            padding: 0 10px 10px 10px;
+        }
+
+        .col h4 {
+            background: rgb(5, 5, 93);
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .ImgThumbnail {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            height: 250px;
+            width: 250px;
+        }
+
+        .ImgThumbnail:nth-of-type(1) {
+            margin-left: 20%;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modalImage {
+            margin: auto;
+            display: block;
+            width: 50%;
+            height: 60%;
+            max-width: 700px;
+        }
+
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(255, 0, 0);
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .modalImage {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Wordpress Pluging And Process</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>All In One WP Security</h4>
+                <p>All round best WordPress security plugin! Version 4.4.7 | By Tips and Tricks HQ, Peter Petreski,
+                    Ruhul, Ivy | View details</p>
+            </div>
+            <div class="col">
+                <h4>Contact Form 7</h4>
+                <p>Just another contact form plugin. Simple but flexible. Version 5.4 | By Takayuki Miyoshi | View
+                    details</p>
+            </div>
+            <div class="col">
+                <h4>Contact Form CFDB7</h4>
+                <p>Save and manage Contact Form 7 messages. Never lose important data. Contact Form CFDB7 plugin is an
+                    add-on for the Contact Form 7 plugin. Version 1.2.5.9 | By Arshid | View details</p>
+            </div>
+            <div class="col">
+                <h4>Duplicate Page</h4>
+                <p>Duplicate Posts, Pages and Custom Posts using single click. Version 4.4 | By mndpsingh287 | View
+                    details </p>
+            </div>
+            <div class="col">
+                <h4>Easy Populate Posts</h4>
+                <p>Populate your site with random generated content. You can configure the post type, description,
+                    excerpt, tags, post meta, terms, images, publish date, status, parent, sticky, etc. Version 3.6.1 |
+                    By Iulia Cazan | View details</p>
+            </div>
+            <div class="col">
+                <h4> EasyJobs</h4>
+                <p>Easy solution for the job recruitment to attract, manage & hire right talent faster. Version 1.3.4 |
+                    By EasyJobs | View details</p>
+            </div>
+            <div class="col">
+                <h4>Elementor</h4>
+                <p>The Elementor Website Builder has it all: drag and drop page builder, pixel perfect design, mobile
+                    responsive editing, and more. Get started now! Version 3.1.3 | By Elementor.com | View details |
+                    Docs & FAQs | Video Tutorials</p>
+            </div>
+            <div class="col">
+                <h4>Essential Addons for Elementor</h4>
+                <p>The Essential plugin you install after Elementor! Packed with 40+ stunning free elements including
+                    Advanced Data Table, Event Calendar, Filterable Gallery, WooCommerce, and many more. Version 4.5.2 |
+                    By WPDeveloper | View details | Docs & FAQs | Video Tutorials</p>
+            </div>
+            <div class="col">
+                <h4>Limit Login Attempts Reloaded </h4>
+                <p>Limit the rate of login attempts for each IP address. Version 2.19.2 | By Limit Login Attempts
+                    Reloaded | View details</p>
+            </div>
+            <div class="col">
+                <h4>NotificationX</h4>
+                <p>Social Proof & Recent Sales Popup, Comment Notification, Subscription Notification, Notification Bar
+                    and many more Version 1.9.3 | By WPDeveloper | View details | Docs & FAQ</p>
+            </div>
+            <div class="col">
+                <h4>Really Simple SSL</h4>
+                <p>Lightweight plugin without any setup to make your site SSL proof Version 4.0.11 | By Really Simple
+                    Plugins | View details</p>
+            </div>
+            <div class="col">
+                <h4>Responsive Lightbox & Gallery</h4>
+                <p>Responsive Lightbox & Gallery allows users to create galleries and view larger versions of images,
+                    galleries and videos in a lightbox (overlay) effect optimized for mobile devices. Version 2.3.2 | By
+                    dFactory | View details | Support</p>
+            </div>
+            <div class="col">
+                <h4>Sassy Social Share</h4>
+                <p>Slickest, Simplest and Optimized Share buttons. Facebook, Twitter, Reddit, Pinterest, WhatsApp and
+                    over 100 more Version 3.3.20 | By Team Heateor | View details</p>
+            </div>
+            <div class="col">
+                <h4>Smart Slider 3</h4>
+                <p>The perfect all-in-one responsive slider solution for WordPress. Version 3.4.1.16 | By Nextend | View
+                    details</p>
+            </div>
+            <div class="col">
+                <h4> Smush</h4>
+                <p>Reduce image file sizes, improve performance and boost your SEO using the free WPMU DEV WordPress
+                    Smush API. Version 3.8.3 | By WPMU DEV | View details | Rate Smush | Support | Roadmap</p>
+            </div>
+            <div class="col">
+                <h4>Sparkle Demo Importer</h4>
+                <p>Import Sparkle Themes Demo Site by one click. Version 1.0.6 | By sparklewpthemes | View details</p>
+            </div>
+            <div class="col">
+                <h4>Strong Testimonials</h4>
+                <p>Collect and display your testimonials or reviews. Version 2.51.2 | By WPChill | View details</p>
+            </div>
+            <div class="col">
+                <h4>WP Fastest Cache</h4>
+                <p>The simplest and fastest WP Cache system Version 0.9.1.5 | By Emre Vona | View details</p>
+            </div>
+            <div class="col">
+                <h4>WP News and Scrolling Widgets</h4>
+                <p>A simple News and three widgets(static, scrolling and with thumbs) plugin. Also work with Gutenberg
+                    shortcode block. Version 4.4.2 | By WP OnlineSupport | View details</p>
+            </div>
+            <div class="col">
+                <h4>Yoast SEO</h4>
+                <p>The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML
+                    sitemaps and much more. Version 15.9.1 | By Team Yoast | View details</p>
+            </div>
+            <div class="col">
+                <h4></h4>
+                <p></p>
+            </div>
+
+
+        </div>
+    </div>
+    <img class="ImgThumbnail" src="images/plugin.png" />
+    <img class="ImgThumbnail" src="images/plugin2.png" />
+    <img class="ImgThumbnail" src="images/plugin2.png" />
+    <!-- The Modal -->
+    <div class="modal">
+        <span class="close">&times;</span>
+        <img class="modalImage" id="img01" />
+    </div>
+    <script>
+        var modalEle = document.querySelector(".modal");
+        var modalImage = document.querySelector(".modalImage");
+        Array.from(document.querySelectorAll(".ImgThumbnail")).forEach(item => {
+            item.addEventListener("click", event => {
+                modalEle.style.display = "block";
+                modalImage.src = event.target.src;
+            });
+        });
+        document.querySelector(".close").addEventListener("click", () => {
+            modalEle.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
