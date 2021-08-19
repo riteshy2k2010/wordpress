@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="https://www.apachefriends.org/download.html">Download Xampp</a></li>
+        <li>Open terminal -> sudo chmod 755 xampp-linux-x64-8.0.9-0-installer.run</li>
+        <li>File permission -> sudo chmod -R 777 /opt/lampp/htdocs/</li>
+        <li>Start Xampp server sudo /opt/lampp/lampp start </li>
+        <li>paste folder wp  in htdoks -> project name </li>
+        <li>create wp-config.php file in next folder and also include this code "define( 'FS_METHOD', 'direct' );" for FTP permission</li>
+        <li>delete "style.css" file after Comment line number </li>
+        <li>Change theme name in style.css and replace image screenshot in line number 4 </li>
+        <li><b>In Head Section</b></li>
+        <li><pre>
+            
+            meta charset="<?php bloginfo( 'charset' ); ?>" />
+            meta name="viewport" content="width=device-width" />
+            title><?php wp_title( '|', true, 'right' ); ?></title>
+            link rel="profile" href="https://gmpg.org/xfn/11" />
+            link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
+            <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
+            
+            link rel="preconnect" href="https://fonts.gstatic.com">
+            link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+            link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+            link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
+            link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css">
+            link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/form.css">
+            link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/local.css">
+            
+            
+            
+            ?php wp_head(); ?>
+            
+        </pre>
+    </li>
+            <li>font convert font click <a href="https://transfonter.org/">https://transfonter.org/</a>then paste local.css <a href="https://fonts.google.com/">https://fonts.google.com/</a></li>
+            <li>font-awesome.css, slick.css, slick-theme.css, font folder, ajax-loader.gif pase in css folder</li>
+            <li>slick.js, jquery.min.js, in js folder</li>
+            <li>footer.php include<code>
+                script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.min.js"></script>
+                script src="<?php echo get_template_directory_uri(); ?>/assets/js/slick.js" ></script>
+                script src="<?php echo get_template_directory_uri(); ?>/assets/js/local.js" ></script>
+            </code></li>
+            <li >On Scroll js
+                <pre>   
+                    $(document).on('ready', function() {
+                    $(".lazy").slick({
+                      infinite: true,
+                      slidesToShow: 4,
+                      slidesToScroll: 2
+                    });
+                  });
+                  $( window ).scroll(function() {
+                  if ($(window).scrollTop()>60) {
+                       $('.nav').addClass('stickyNav')
+                  } else if ($(window).scrollTop()<60) {
+                       $('.nav').removeClass('stickyNav')
+                  }
+                  
+              }); 
+            </pre>
+            </li>
+            <li>color choose <a href="https://www.december.com/html/spec/colorhex.html">https://www.december.com/html/spec/colorhex.html</a></li>
+            <li></li>
+    </ul>
+</body>
+</html>
