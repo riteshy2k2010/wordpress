@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+
+    .container-btn {
+        background: #031321;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+        padding: 15px 50px;
+        color: #2196f3;
+        text-decoration: none;
+        font-size: 20px;
+        overflow: hidden;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.2s;
+    }
+
+    /* a:hover {
+        color: #255784;
+        background: #2196f3;
+        box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    } */
+
+    a span {
+        position: absolute;
+        display: block;
+    }
+
+    a span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #2196f3);
+    }
+
+    a:hover span:nth-child(1) {
+        left: 0%;
+        transition: 1s;
+    }
+
+    a span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #2196f3);
+    }
+
+    a:hover span:nth-child(3) {
+        right: 0%;
+        transition: 1s;
+        transition-delay: .5s;
+    }
+
+    a span:nth-child(2) {
+        right: 0;
+        top: -100%;
+        height: 100%;
+        width: 2px;
+        background: linear-gradient(180deg, transparent, #2196f3);
+    }
+
+    a:hover span:nth-child(2) {
+        top: 0%;
+        transition: 1s;
+        transition-delay: .25s;
+    }
+
+    a span:nth-child(4) {
+        left: 0;
+        bottom: -100%;
+        height: 100%;
+        width: 2px;
+        background: linear-gradient(360deg, transparent, #2196f3);
+    }
+
+    a:hover span:nth-child(4) {
+        bottom: 0%;
+        transition: 1s;
+        transition-delay: .75s;
+    }
+</style>
+
+<body>
+    <div class="container-btn">
+        <div class="row">
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Button
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>

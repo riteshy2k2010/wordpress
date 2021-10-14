@@ -1,0 +1,132 @@
+@font-face {font-family: 'Montserrat'; font-weight: 900; font-style: normal;
+  src: url('../fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-Black.woff') format('woff'), url('../fonts/Montserrat-Black.ttf')  format('truetype'), url('../fonts/Montserrat-Black.svg#Montserrat-Black') format('svg');
+}
+
+@font-face {font-family: 'Montserrat'; font-weight: 700; font-style: normal;
+  src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf')  format('truetype'), url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+}
+
+@font-face {font-family: 'Montserrat'; font-weight: 800; font-style: normal;
+  src: url('../fonts/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-ExtraBold.woff') format('woff'), url('../fonts/Montserrat-ExtraBold.ttf')  format('truetype'), url('../fonts/Montserrat-ExtraBold.svg#Montserrat-ExtraBold') format('svg');
+}
+
+@font-face {font-family: 'Montserrat'; font-weight: 300; font-style: normal;
+  src: url('../fonts/Montserrat-ExtraLight.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-ExtraLight.woff') format('woff'), url('../fonts/Montserrat-ExtraLight.ttf')  format('truetype'), url('../fonts/Montserrat-ExtraLight.svg#Montserrat-ExtraLight') format('svg');
+}
+
+@font-face {font-family: 'Montserrat'; font-weight: 200; font-style: normal;
+  src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-Light.woff') format('woff'), url('../fonts/Montserrat-Light.ttf')  format('truetype'), url('../fonts/Montserrat-Light.svg#Montserrat-Light') format('svg');
+}
+
+@font-face {font-family: 'Montserrat'; font-weight: 500; font-style: normal;
+  src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-Medium.woff') format('woff'), url('../fonts/Montserrat-Medium.ttf')  format('truetype'), url('../fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+}
+
+@font-face {font-family: 'Montserrat'; font-weight: 400; font-style: normal;
+  src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf')  format('truetype'), url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+}
+
+@font-face {font-family: 'Montserrat'; font-weight: 600; font-style: normal;
+  src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-SemiBold.woff') format('woff'), url('../fonts/Montserrat-SemiBold.ttf')  format('truetype'), url('../fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg');
+}
+
+@font-face {font-family: 'Montserrat'; font-weight: 100; font-style: normal;
+  src: url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-Thin.woff') format('woff'), url('../fonts/Montserrat-Thin.ttf')  format('truetype'), url('../fonts/Montserrat-Thin.svg#Montserrat-Thin') format('svg');
+}
+@font-face {font-family: 'Norican'; src: url('../fonts/Norican-Regular.eot'); src: url('../fonts/Norican-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Norican-Regular.woff2') format('woff2'), url('../fonts/Norican-Regular.woff') format('woff'), url('../fonts/Norican-Regular.ttf') format('truetype'), url('../fonts/Norican-Regular.svg#Norican-Regular') format('svg');
+    font-weight: normal; font-style: normal; font-display: swap;
+}
+
+html, body{font-family: 'Montserrat' !important; font-weight: 400;}
+a, a:hover, a:focus, a:active{text-decoration: none;}
+/*a:hover{color: #f64747 !important;}*/
+input:focus, select:focus, button:focus{box-shadow: none !important; outline: none !important;}
+ul{margin: 0;}
+.row.vertical-middle{display: flex; -webkit-display: flex; -ms-display: flex; -moz-display: flex; -ms-flex-align: center; align-items: center; } 
+.align-center{margin: 0 auto !important;}
+img,.entry-content img, .comment-content img, .widget img, img.header-image, .author-avatar img, img.wp-post-image{box-shadow: none !important; height: auto; width: auto; max-width: 100%;}
+h3, h2{font-size: 36px;}
+p{font-size: 16px;font-family: 'Montserrat' !important;}
+.small-heading, .small-heading {font-family: 'Montserrat' !important;font-weight: 500 !important;}
+.btn-read{background: #e0db84; border: 2px solid #e0db84; color: #fff; padding: 12px 35px; display: inline-block; text-align: center; font-size: 14px; font-weight: 600; text-transform: uppercase; border-radius: 0;}
+.btn-read:hover{background: transparent; color: #214f3a}
+i.fa {font-family: 'FontAwesome'; font-weight: 500; }
+
+/*--offcanvas-css--*/
+#sidebar{opacity: 0;}
+.sidebar-offcanvas-menu .sidebar-wrapper{position:relative; height: 100%; overflow: auto;}
+#sidebar.sidebar-wrapperd-box{opacity: 1;}
+.sidebar-offcanvas-menu .outer {height: 100%; background: #ffffff; overflow: auto; padding: 0 0 20px;}
+.sidebar-offcanvas-menu .inner {padding: 10px;}
+.sidebar-offcanvas-menu #sidebar {position: fixed; top: 0px; bottom: 0px; width: 300px; left: -300px;}
+.sidebar-offcanvas-menu .sidebar-top-header:after{content: '';display:table; width: 100%;}
+.sidebar-offcanvas-menu .sidebar-top-header {background-color: #ffffff; padding: 15px; border-bottom: rgba(177, 177, 177, 0.29) 1px solid;}
+.sidebar-offcanvas-menu .sidebar-close-btn {text-align: right; float: right; padding:0;}
+.sidebar-offcanvas-menu .sidebar-logo {float: left;}
+.sidebar-offcanvas-menu .sidebar-logo img {max-width: 52px; margin: 0 auto;}
+.sidebar-offcanvas-menu .sidebar-close-btn a {color: #343434; font-size: 30px; text-align: right; padding: 10px 0 0; cursor: pointer;}
+.sidebar-offcanvas-menu ul.sidebar-menu, .sidebar-offcanvas-menu ul.sidebar-menu ul#menu-sidebar-menu-desktop {padding: 0; margin: 0;}
+.sidebar-offcanvas-menu ul.sidebar-menu li {display: block; transition: all .3s ease-in; -webkit-transition: all .3s ease-in;}
+.sidebar-offcanvas-menu ul.sidebar-menu li a {color: #000000;display: block; text-transform: uppercase; padding: 10px 15px; font-size: 14px;}
+ul.sidebar-menu > li {border-bottom: #0000004f 1px dashed;}
+.sidebar-offcanvas-menu .inner {padding: 0;}
+ul.sidebar-menu > li.sub-childli > a:after {content: "\f107"; font-family: FontAwesome; color: #FFF; position: absolute; right: 15px; font-size: 20px; line-height: 20px;}
+ul.sidebar-menu > li a {position: relative;}
+ul.sidebar-menu > li > ul {padding: 0; margin: 0; display: none;}
+ul.sidebar-menu > li > ul > li a {text-transform: capitalize !important; padding-left: 35px !important; font-size: 14px !important;}
+ul.sidebar-menu li.current-menu-item > a, ul.sidebar-menu li:hover > a {background-color: #214f3a;color: #FFF;}
+.sidebar-offcanvas-menu .header-social {display: flex; align-items: center;justify-content: center; padding-top: 30px; }
+.sidebar-offcanvas-menu .header-socialin a {color: #333;border: dashed 1px #4b9a75;}
+/*--offcanvas-css-end--*/
+
+/*--header-css--*/
+header {padding: 10px 0; position: fixed; top: 0; width: 100%; z-index: 99999;transition: all .3s ease; -webkit-transition: all .3s ease;}
+.header-socialin ul{display: flex; text-align: right; width: 100%; justify-content: flex-end;padding: 0;}
+.header-socialin ul li{list-style: none;padding-left: 10px;}
+.header-socialin a {display: block; margin: 0 0 0 auto; color: #fff; text-align: center; font-size: 17px; transition: all .3s ease; -webkit-transition: all .3s ease; border: dashed 1px #e0db84; width: 35px; height: 35px; line-height: 35px; border-radius: 50%;}
+.header-socialin a:hover{color: #fff; border-color: #e0db84; background: #e0db84;}
+.mobile-menubtn {display: none; }
+.btnmmenu {max-width: 37px; margin: 0px 0 0 auto; }
+.btnmmenu span {width: 35px; height: 2px; background-color: #313131; display: block; margin: 6px 0; }
+.main-navbarbox .row {display: flex; align-items: center; justify-content: center;}
+.logo-boxin a {display:block; }
+.logo-boxin a img{width: auto; max-width:100px; transition: all .3s ease; -webkit-transition: all .3s ease; filter: brightness(0) invert(1); -webkit-filter: brightness(0) invert(1);}
+.desktop-menuboxin ul#menu-main-menu {display: flex; justify-content: space-between;}
+.desktop-menuboxin ul.nav-menu {padding: 0; }
+.desktop-menuboxin ul li.menu-item-has-children ul {display: none; }
+.desktop-menuboxin ul li {position: relative; display: inline-block; padding: 0; }
+.desktop-menuboxin ul li a {display: block; padding: 10px 10px;font-size: 14px; color: #ffffff; transition: all .3s ease; text-transform: uppercase; -webkit-transition: all .3s ease; font-weight: 500;}
+.desktop-menuboxin ul li:hover > a,
+.desktop-menuboxin ul li.current-menu-item > a { color: #2fc17d; border-radius: 0; }
+.desktop-menuboxin ul li.menu-item-has-children ul{position: absolute; width: 300px; text-align: left;background-color: #f3f3f3;z-index: 9999;}
+.desktop-menuboxin ul li:nth-child(3) ul, 
+.desktop-menuboxin ul li:last-child ul{right: 0;}
+.desktop-menuboxin ul li.menu-item-has-children ul li{display: block; padding: 0;}
+.desktop-menuboxin ul li.menu-item-has-children ul li a{font-size: 14px;}
+.desktop-menuboxin ul li:hover > ul{display: block;}
+.sidebar-offcanvas-menu ul.sidebar-menu li.menu-item-has-children {position: relative; }
+.sidebar-offcanvas-menu ul.sidebar-menu li.menu-item-has-children img {position: absolute; right: 0; top: 0; }
+header.darkHeader .logo-boxin img {max-width: 80px; }
+header.darkHeader {box-shadow: 0 0 10px rgb(0 0 0 / 9%); background-color: #FFF;}
+.logo-boxin {text-align: center; } 
+.header-social {display: flex; align-items: center; justify-content: flex-end; }
+header.darkHeader .logo-boxin a img {filter: none;}
+header.darkHeader .desktop-menuboxin ul li a {color: #878c89;}
+header.darkHeader .header-socialin a {color: #333;border: dashed 1px #4b9a75;}
+header.darkHeader .desktop-menuboxin ul li:hover > a, header.darkHeader .desktop-menuboxin ul li.current-menu-item > a {color: #2fc17d; border-radius: 0; }
+/*--end--*/
+
+ 
+
+@media (max-width: 991px){
+  /*--header-css--*/
+  .desktop-menubox,.desktop-menuboxin,.header-social {display: none;}
+  .mobile-menushow {display: block;}
+  .mobile-menubtn {display: block;}
+  .mobile-menubox div.btnbox {width: 40px; text-align: center; height: 33px; margin: 29px 0 0 auto; cursor: pointer;}
+  .mobile-menubox div.btnbox span {display: block; width: 34px; height: 2px; background-color: #393939; margin: 6px auto; }
+  /*--end--*/
+
+}  
+
+ 

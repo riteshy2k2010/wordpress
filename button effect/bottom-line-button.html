@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+
+    .container-btn {
+        background: #031321;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .container-btn ul {
+        display: flex;
+        justify-content: space-around;
+        min-width: 540px;
+    }
+
+    .container-btn ul li a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .container-btn ul li {
+        list-style: none;
+        position: relative;
+        margin: 10px;
+        padding: 10px 5px 10px 5px;
+        transition: all 1s;
+    }
+
+    .container-btn ul li:before {
+        opacity: 0;
+        content: '';
+        height: 2px;
+        width: 0;
+        background: rgb(255, 255, 255);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        transition: all .5s;
+    }
+
+    .container-btn ul li:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: all 1s;
+    }
+
+    .container-btn ul li ul.sub-menu li a {
+        color: #000;
+        text-decoration: none;
+        text-transform: capitalize;
+
+    }
+
+    .container-btn ul li ul.sub-menu {
+        /* display: none; */
+        flex-direction: column;
+        min-width: 100px;
+        position: absolute;
+        background: white;
+        /* max-width: 100px; */
+        top: 30px;
+        left: 0;
+        opacity: 0;
+        transition: all .5s linear;
+        transition: height 1s;
+        height: 0;
+    }
+
+    .container-btn ul li:hover ul.sub-menu {
+        opacity: 1;
+        transition: all .5s linear;
+        height: auto;
+
+    }
+</style>
+
+<body>
+    <div class="container-btn">
+        <div class="row">
+            <ul>
+                <li><a href="http://">Test 1 </a></li>
+                <li><a href="http://">Test 1 </a></li>
+                <li><a href="http://">Test 1 </a>
+                    <ul class="sub-menu">
+                        <li><a href="http://">Test 2 </a></li>
+                        <li><a href="http://">Test 2 </a></li>
+                    </ul>
+                </li>
+                <li><a href="http://">Test 1 </a></li>
+                <li><a href="http://">Test 1 </a></li>
+                <li><a href="http://">Test 1 </a></li>
+                <li><a href="http://">Test 1 </a></li>
+                <li><a href="http://">Test 1 </a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>

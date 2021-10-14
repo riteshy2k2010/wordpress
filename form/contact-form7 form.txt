@@ -1,0 +1,28 @@
+<div class="contact-form-box">
+<div class="input-group">
+<div class="input-box">
+[text* first-name placeholder "First Name"]
+</div>
+<div class="input-box">
+[text last-name placeholder "Last Name"]
+</div>
+</div>
+<div class="input-group">
+<div class="input-box">
+[email* your-email placeholder "Email"]
+</div>
+<div class="input-box">
+[tel your-phone placeholder "Phone"]
+</div>
+</div>
+<div class="input-box">
+[textarea your-message placeholder "Message"]
+</div>
+<div class="submit-box">
+[submit "Send Message"]
+</div>
+</div>
+
+<style>
+
+</style>

@@ -1,0 +1,29 @@
+/*--footer-css--*/
+.footer-sec {background-color:var(--color6); position: relative;}
+
+
+.footer-sec .container {max-width: 1170px; margin: auto; padding-left: 15px; padding-right: 15px; }
+.footer-sec .row {display: flex; justify-content: space-between; width: 100%; }
+.footer-sec-col li a:hover {  color:var(--color8);}
+.footer-sec-col-1 .logo-box img {width: 150px; }
+.footer-sec-col-1 p {color:var(--color6); }
+.footer-sec-col h3.widget-title {color: var(--color8); font-size: 18px !important; text-transform: capitalize; position: relative; margin-bottom: 15px;font-family: var(--subhead); }
+.footer-sec-col-2 ul {padding: 0; margin: 0; }
+.footer-sec-col-2 ul li {display: block; position: relative; padding: 0 0 10px; }
+.footer-sec-col-2 ul li a {color: var(--color3); position: relative; padding-left: 15px;font-family: var(--para); }
+.footer-sec-col-2 ul li a:before {content: ""; position: absolute; left: 0; top: 8px; transition: all .3s ease; -webkit-transition: all .3s ease; transform: rotate(-38deg); -webkit-transform: rotate(-45deg);  border: solid var(--color3); border-width: 0 7px 7px 0;  padding: 0px; }
+.footer-sec-col-3 ul {padding: 0; margin: 0; }
+.footer-sec-col-3 ul li {display: block; padding: 0 0 10px; position: relative; }
+.footer-sec-col-3 ul li a {color: var(--color3); position: relative; padding-left: 25px;font-family:var(--para) ; }
+.footer-sec-col-3 ul li i {position: absolute; left: 0; top: 5px; color: var(--color3); transition: all .3s ease; -webkit-transition: all .3s ease; }
+.footer-col-social ul {padding: 10px 0 0; margin: 0; }
+.footer-col-social ul li {display: inline-block; padding: 0 10px 10px 0; }
+.footer-col-social ul li a {color: #FFF; font-size: 20px; background-color: var(--color3); width: 35px; height: 35px; display: block; border-radius: 0px; text-align: center; line-height: 35px; border: var(--color3) 1px solid;}
+.footer-sec-col {padding-top: 50px; padding-bottom: 40px; }
+.copyrightbox {background-color:var(--color1); text-align: center; padding: 10px 0; } 
+.copyrightbox p {margin: 0; color: #FFF; font-size: 16px; font-family: var(--para); } 
+.footer-sec-col-2 ul li a:hover {padding-left: 15px; } 
+/* .footer-sec-col-2 ul li a:hover:before {left: 15px; } */
+.footer-col-social ul li a:hover {background-color: var(--color1); color:var(--color8); border-radius: 100px; border-color: var(--color1);}
+.footer-sec-col-2 ul li a:hover:before {border-color: var(--color8);  transform: rotate( -38deg);  -webkit-transform: rotate( -90deg);}
+/*--end--*/
