@@ -1,0 +1,126 @@
+
+            height: 100%;
+            top: 0;
+            transform: translateX(-100%);
+            transition: all .5s;
+        }
+
+        ul li {
+            text-align: center;
+            list-style: none;
+        }
+
+        .mobile_icon {
+            background: green;
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            right: 20px;
+            transition: all .5s;
+        }
+
+        .mobile_icon span.tap1 {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            z-index: 100;
+            border: 2px solid #fff;
+            height: 2px;
+            width: 30px;
+            transition: all .5s;
+        }
+
+        .mobile_icon span.tap2 {
+            position: absolute;
+            right: 5px;
+            top: 15px;
+            z-index: 100;
+            border: 2px solid #fff;
+            height: 2px;
+            width: 30px;
+            transition: all .5s;
+        }
+
+        .mobile_icon span.tap3 {
+            position: absolute;
+            right: 5px;
+            top: 25px;
+            z-index: 100;
+            border: 2px solid #fff;
+            height: 2px;
+            width: 30px;
+            transition: all .5s;
+        }
+
+        nav.nav-active ul {
+            transform: translate(0);
+        }
+
+        .mobile_icon.close {
+            transform: rotate(6deg);
+            z-index: 100;
+        }
+
+        .mobile_icon.close span.tap2 {
+            display: none;
+        }
+
+        .mobile_icon.close span.tap1 {
+            transform: rotate(45deg);
+            top: 15px;
+            border: 2px solid red;
+        }
+
+        .mobile_icon.close span.tap3 {
+            border: 2px solid red;
+            transform: rotate(-55deg);
+            top: 15px;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="#">
+                        <h2>LogoP</h2>
+                    </a>
+                </div>
+                <div class="mobile_icon">
+                    <span class="tap1"></span>
+                    <span class="tap2"></span>
+                    <span class="tap3"></span>
+
+                </div>
+
+                <div class="col-md-10">
+                    <nav class="">
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#"> about Us</a></li>
+                            <li><a href="#"> services</a></li>
+                            <li><a href="#"> projects</a></li>
+                            <li><a href="#"> blogs</a></li>
+                            <li><a href="#"> Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.mobile_icon').click(function () {
+                $('nav').toggleClass('nav-active');
+            });
+            $('.mobile_icon').click(function () {
+                $(this).toggleClass('close');
+            });
+        });
+    </script>
+</body>
+
+</html>

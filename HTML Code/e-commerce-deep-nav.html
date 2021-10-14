@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce_deep Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="pingback" href="https://wp.localserverweb.com/sunhillsandpharma/xmlrpc.php">
+    <link rel="stylesheet"
+        href="https://wp.localserverweb.com/sunhillsandpharma/wp-content/themes/sunhillsandpharma/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://wp.localserverweb.com/sunhillsandpharma/wp-content/themes/sunhillsandpharma/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://wp.localserverweb.com/sunhillsandpharma/wp-content/themes/sunhillsandpharma/css/nav.css">
+    <link rel="stylesheet"
+        href="https://wp.localserverweb.com/sunhillsandpharma/wp-content/themes/sunhillsandpharma/css/local.css">
+</head>
+<style>
+    .top-header {
+        height: 60px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .top-header-nav {
+        max-width: 90%;
+
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top-nav-left ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        /* width: 300px; */
+        align-items: center;
+        height: 60px;
+    }
+
+    .top-nav-left ul li {
+        padding: 10px;
+    }
+
+    .top-nav-right ul {
+        display: flex;
+        height: 60px;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+
+    .top-nav-right ul li {
+        padding: 20px;
+    }
+
+    .header-main.header-wrapper,
+    .site-header .header-nav {
+        background-color: #ffffff;
+    }
+
+    .site-header .header-main {
+        padding-top: 1.875rem;
+        padding-bottom: 1.875rem;
+        color: #3e445a;
+        background-color: #fff;
+    }
+
+    .site-header .header-wrapper>.container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    .column.column-left {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+
+    .column {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .site-header .header-buttons {
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .site-header .header-buttons .header-canvas {
+        margin-left: -.625rem;
+        margin-right: .9375rem;
+    }
+
+    .site-header .header-buttons .header-canvas a {
+        font-size: 1.25rem;
+        width: 2.375rem;
+        height: 2.375rem;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .site-header .header-buttons a {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+        color: #3e445a;
+        text-decoration: none;
+    }
+
+    .site-brand {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+
+    .site-brand a {
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        color: currentColor;
+        text-decoration: none;
+    }
+
+    .site-header .header-main .site-brand img {
+        height: 44px;
+    }
+
+    .site-header .header-main .column-center {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        padding-left: 1.875rem;
+    }
+
+    .column.column-center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .column {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .site-header .header-location {
+        position: relative;
+        margin-right: 1.875rem;
+    }
+
+    .site-location a {
+        background-color: #ffffff;
+        color: #3e445a;
+        border-color: #d9d9e9;
+    }
+
+    .site-location a {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
+        text-decoration: none;
+        max-width: 11.25rem;
+        min-height: 3.75rem;
+        padding-left: 1.125rem;
+        padding-right: 1.125rem;
+        color: currentColor;
+        border: 1px solid #d9d9e9;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        border-radius: var(--size-border-radius);
+        -webkit-transition: -webkit-box-shadow 0.3s cubic-bezier(0.83, 0.26, 0.19, 0.87);
+        transition: -webkit-box-shadow 0.3s cubic-bezier(0.83, 0.26, 0.19, 0.87);
+        transition: box-shadow 0.3s cubic-bezier(0.83, 0.26, 0.19, 0.87);
+        transition: box-shadow 0.3s cubic-bezier(0.83, 0.26, 0.19, 0.87), -webkit-box-shadow 0.3s cubic-bezier(0.83, 0.26, 0.19, 0.87);
+    }
+
+    .site-location a .location-description {
+        font-size: .625rem;
+        opacity: .5;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .site-location a .current-location {
+        color: #233a95;
+    }
+
+    .site-location a .current-location {
+        font-size: .8125rem;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        color: #233a95;
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3;
+        padding-right: 1.25rem;
+    }
+
+    .site-location a:after {
+        color: #233a95;
+    }
+
+    .site-location a:after {
+        position: relative;
+        font-family: "klbtheme";
+        font-size: 70%;
+        content: '\e8d5';
+        text-shadow: 0px 0px 0px;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        right: 1.125rem;
+        color: #233a95;
+        margin-left: auto;
+        top: .625rem;
+        right: 0;
+    }
+
+    .site-header .header-main .header-search {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+
+    .dgwt-wcas-search-wrapp {
+        max-width: 600px;
+    }
+
+    .dgwt-wcas-search-wrapp {
+        position: relative;
+        line-height: 100%;
+        display: block;
+        color: #444;
+        min-width: 230px;
+        width: 100%;
+        text-align: left;
+        margin: 0 auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .site-header .header-main .header-search form {
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dgwt-wcas-search-form {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .dgwt-wcas-details-wrapp *,
+    .dgwt-wcas-search-wrapp *,
+    .dgwt-wcas-suggestions-wrapp * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .dgwt-wcas-sf-wrapp {
+        zoom: 1;
+        width: 100%;
+        max-width: 100vw;
+        margin: 0;
+        position: relative;
+        background: 0 0;
+    }
+
+    .dgwt-wcas-no-submit .dgwt-wcas-ico-magnifier {
+        display: none;
+    }
+
+    .dgwt-wcas-no-submit .dgwt-wcas-ico-magnifier {
+        height: 50%;
+        margin: auto;
+        max-height: 20px;
+        width: 100%;
+        max-width: 20px;
+        left: 12px;
+        right: auto;
+        opacity: .5;
+        fill: #000;
+    }
+
+    .dgwt-wcas-ico-magnifier,
+    .dgwt-wcas-ico-magnifier-handler {
+        max-width: 20px;
+    }
+
+    .dgwt-wcas-ico-magnifier,
+    .dgwt-wcas-ico-magnifier-handler {
+        max-width: 20px;
+    }
+
+    .dgwt-wcas-ico-magnifier {
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 65%;
+        display: block;
+    }
+
+    svg {
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .elementor-screen-only,
+    .screen-reader-text,
+    .screen-reader-text span,
+    .ui-helper-hidden-accessible {
+        position: absolute;
+        top: -10000em;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .screen-reader-text {
+        clip: rect(1px, 1px, 1px, 1px);
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+    }
+
+    .screen-reader-text {
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        overflow: hidden;
+        position: absolute !important;
+        width: 1px;
+    }
+
+    .screen-reader-text {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        overflow-wrap: normal !important;
+        word-wrap: normal !important;
+        padding: 0;
+        position: absolute !important;
+        width: 1px;
+    }
+
+    .screen-reader-text {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        word-wrap: normal !important;
+    }
+
+    label {
+        font-size: .8125rem;
+    }
+
+    label {
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+
+    .site-header .header-main .header-search .dgwt-wcas-search-form input[type="search"] {
+        background-color: #f3f4f7;
+        color: #202435;
+        border-color: #f3f4f7;
+    }
+
+    .site-header .header-main .header-search .dgwt-wcas-search-form input[type="search"] {
+        border-radius: var(--size-border-radius);
+        padding-left: 1.875rem;
+        padding-right: 3.75rem;
+        height: 3.75rem;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-family: var(--font-primary);
+        font-size: .9375rem;
+        width: 100%;
+        padding: 0 .9375rem;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: var(--color-text);
+        background-color: var(--color-form-background);
+        border: 1px solid transparent;
+        -webkit-transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
+        transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
+    }
+
+    .dgwt-wcas-no-submit .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+        padding-left: 8px;
+    }
+
+    .site-header .header-main .header-search input[type="search"] {
+        padding-left: 1.875rem;
+        padding-right: 3.75rem;
+        height: 3.75rem;
+    }
+
+    .dgwt-wcas-no-submit .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+        padding: 10px 15px 10px 40px;
+    }
+
+    .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        line-height: 100%;
+        padding: 10px 15px;
+        margin: 0;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+    }
+
+    input[type=search].dgwt-wcas-search-input,
+    input[type=text].dgwt-cas-search-input {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin: 0;
+        -webkit-appearance: textfield;
+        text-align: left;
+    }
+
+    input[type=color],
+    input[type=date],
+    input[type=datetime-local],
+    input[type=datetime],
+    input[type=email],
+    input[type=month],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    input[type=week],
+    textarea,
+    select {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-family: var(--font-primary);
+        font-size: .9375rem;
+        width: 100%;
+        height: 2.5rem;
+        padding: 0 .9375rem;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: var(--color-text);
+        background-color: var(--color-form-background);
+        border: 1px solid transparent;
+        border-radius: var(--size-form-radius);
+        -webkit-transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
+        transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
+    }
+
+    [type=search] {
+        outline-offset: -2px;
+        -webkit-appearance: none;
+    }
+
+    .dgwt-wcas-details-wrapp *,
+    .dgwt-wcas-search-wrapp *,
+    .dgwt-wcas-suggestions-wrapp * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    button,
+    input {
+        overflow: visible;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    .dgwt-wcas-preloader {
+        right: 40px;
+    }
+
+    .dgwt-wcas-preloader {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: auto 44%;
+    }
+
+    .dgwt-wcas-sf-wrapp:after {
+        color: #202435;
+    }
+
+    .dgwt-wcas-sf-wrapp:after {
+        font-family: "klbtheme";
+        font-style: normal;
+        font-weight: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: '\e808';
+        position: absolute;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        width: 3.75rem;
+        height: 100%;
+        right: 0;
+        top: 0;
+    }
+
+    .site-header .header-main .column-right {
+        margin-left: 1.875rem;
+    }
+
+    .column.column-right {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+
+    .site-header .header-buttons {
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .site-header .header-wrapper>.container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    .site-header .header-buttons a {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+        color: #3e445a;
+        text-decoration: none;
+    }
+
+    .site-header .header-buttons .header-login.bordered .button-icon {
+        background-color: #ffffff;
+        border-color: #e2e4ec;
+    }
+
+    .site-header .header-buttons .button-icon {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 1.375rem;
+    }
+
+    .site-header .header-buttons .header-login.bordered .button-icon i {
+        color: #3e445a;
+    }
+
+    .site-header .header-buttons .button-icon i {
+        line-height: 1;
+    }
+
+    .klbth-icon-user:before {
+        content: '\e807';
+    }
+
+    [class^="klbth-icon-"]:before,
+    [class*=" klbth-icon-"]:before {
+        font-family: "klbtheme";
+        font-style: normal;
+        font-weight: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    @media screen and (min-width: 48rem) {
+        .site-header .header-buttons .bordered .button-icon i {
+            text-shadow: 0px 0px 0px;
+        }
+
+        .site-header .header-buttons .bordered .button-icon {
+            font-size: 1.125rem;
+            width: 2.625rem;
+            height: 2.625rem;
+            border: 1px solid #e2e4ec;
+            border-radius: 50%;
+        }
+
+        .site-header .header-main .header-search input[type="search"] {
+            border-radius: var(--size-border-radius);
+        }
+    }
+
+
+    @media screen and (min-width: 20rem) {
+        .site-header .header-main .header-buttons .header-canvas {
+            margin-right: .625rem;
+        }
+
+    }
+
+
+    @media screen and (min-width: 75rem) {
+        .site-header .header-main {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .hide-desktop {
+            display: none !important;
+        }
+
+        .site-header .header-main .column-center {
+            padding-left: 3.75rem;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="top-header">
+            <div class="top-header-nav">
+                <div class="top-nav-left">
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Partner Brands</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                    </ul>
+                </div>
+                <div class="top-nav-right">
+                    <ul>
+                        <li> 100% Secure delivery without contacting the courier </li>
+                        <li>Need help? Call Us:<a href="#"> + 0020 500</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-main header-wrapper">
+            <div class="container">
+                <div class="column column-left">
+                    <div class="header-buttons hide-desktop">
+                        <div class="header-canvas button-item"> <a href="#"> <i class="klbth-icon-menu-thin"></i> </a>
+                        </div>
+                    </div>
+                    <div class="site-brand">
+                        <a href="https://klbtheme.com/bacola/" title=" "> <img class="desktop-logo hide-mobile"
+                                src="https://wp.localserverweb.com/sunhillsandpharma/wp-content/uploads/2021/09/logo.png"
+                                alt=" ">
+                        </a>
+                    </div>
+                </div>
+                <div class="column column-center">
+                    <div class="header-location site-location hide-mobile">
+                        <a href="#">
+                            <span class="location-description">Your Location</span>
+                            <div class="current-location">Select a Location</div>
+                        </a>
+                    </div>
+                    <div class="header-search">
+                        <div
+                            class="dgwt-wcas-search-wrapp dgwt-wcas-no-submit woocommerce js-dgwt-wcas-layout-classic dgwt-wcas-layout-classic js-dgwt-wcas-mobile-overlay-enabled dgwt-wcas-active">
+                            <form class="dgwt-wcas-search-form" role="search" action="https://klbtheme.com/bacola/"
+                                method="get">
+                                <div class="dgwt-wcas-sf-wrapp">
+                                    <svg version="1.1" class="dgwt-wcas-ico-magnifier"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px" y="0px" viewBox="0 0 51.539 51.361"
+                                        enable-background="new 0 0 51.539 51.361" xml:space="preserve">
+                                        <path fill="#444"
+                                            d="M51.539,49.356L37.247,35.065c3.273-3.74,5.272-8.623,5.272-13.983c0-11.742-9.518-21.26-21.26-21.26 S0,9.339,0,21.082s9.518,21.26,21.26,21.26c5.361,0,10.244-1.999,13.983-5.272l14.292,14.292L51.539,49.356z M2.835,21.082 c0-10.176,8.249-18.425,18.425-18.425s18.425,8.249,18.425,18.425S31.436,39.507,21.26,39.507S2.835,31.258,2.835,21.082z">
+                                        </path>
+                                    </svg>
+                                    <label class="screen-reader-text" for="dgwt-wcas-search-input-1">Products
+                                        search</label>
+                                    <input id="dgwt-wcas-search-input-1" type="search" class="dgwt-wcas-search-input"
+                                        name="s" value="" placeholder="Search for products..." autocomplete="off">
+                                    <div class="dgwt-wcas-preloader"></div><input type="hidden" name="post_type"
+                                        value="product">
+                                    <input type="hidden" name="dgwt_wcas" value="1">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="column column-right">
+                    <div class="header-buttons">
+                        <div class="header-login button-item bordered">
+                            <a href="https://klbtheme.com/bacola/my-account/">
+                                <div class="button-icon"><i class="klbth-icon-user"></i></div>
+                            </a>
+                        </div>
+                        <div class="header-cart button-item bordered">
+                            <a href="https://klbtheme.com/bacola/cart/">
+
+                                <div class="cart-price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                class="woocommerce-Price-currencySymbol">$</span>0.00</bdi></span></div>
+
+                                <div class="button-icon"><i class="klbth-icon-shopping-bag"></i></div>
+                                <span class="cart-count-icon">0</span>
+
+
+
+                            </a>
+                            <div class="cart-dropdown hide">
+                                <div class="cart-dropdown-wrapper">
+
+                                    <div class="fl-mini-cart-content">
+
+
+                                        <div class="cart-empty">
+                                            <div class="empty-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.028 280.028"
+                                                    width="280.028" height="80.028">
+                                                    <path class="c-01" d="M35.004 0h210.02v78.758H35.004V0z"
+                                                        fill="#d07c40"></path>
+                                                    <path class="c-02"
+                                                        d="M262.527 61.256v201.27c0 9.626-7.876 17.502-17.502 17.502H35.004c-9.626 0-17.502-7.876-17.502-17.502V61.256h245.025z"
+                                                        fill="#f4b459"></path>
+                                                    <path class="c-03"
+                                                        d="M35.004 70.007h26.253V26.253L35.004 0v70.007zm183.767-43.754v43.754h26.253V0l-26.253 26.253z"
+                                                        fill="#f4b459"></path>
+                                                    <path class="c-04"
+                                                        d="M61.257 61.256V26.253L17.503 61.256h43.754zm157.514-35.003v35.003h43.754l-43.754-35.003z"
+                                                        fill="#e3911c"></path>
+                                                    <path class="c-05"
+                                                        d="M65.632 105.01c-5.251 0-8.751 3.5-8.751 8.751s3.5 8.751 8.751 8.751 8.751-3.5 8.751-8.751c0-5.25-3.5-8.751-8.751-8.751zm148.764 0c-5.251 0-8.751 3.5-8.751 8.751s3.5 8.751 8.751 8.751 8.751-3.5 8.751-8.751c.001-5.25-3.501-8.751-8.751-8.751z"
+                                                        fill="#cf984a"></path>
+                                                    <path class="c-06"
+                                                        d="M65.632 121.637c5.251 0 6.126 6.126 6.126 6.126 0 39.379 29.753 70.882 68.257 70.882s68.257-31.503 68.257-70.882c0 0 .875-6.126 6.126-6.126s6.126 6.126 6.126 6.126c0 46.38-35.003 83.133-80.508 83.133s-80.508-37.629-80.508-83.133c-.001-.001.874-6.126 6.124-6.126z"
+                                                        fill="#cf984a"></path>
+                                                    <path class="c-07"
+                                                        d="M65.632 112.886c5.251 0 6.126 6.126 6.126 6.126 0 39.379 29.753 70.882 68.257 70.882s68.257-31.503 68.257-70.882c0 0 .875-6.126 6.126-6.126s6.126 6.126 6.126 6.126c0 46.38-35.003 83.133-80.508 83.133s-80.508-37.629-80.508-83.133c-.001 0 .874-6.126 6.124-6.126z"
+                                                        fill="#fdfbf7"></path>
+                                                </svg>
+                                            </div><!-- empty-icon -->
+                                            <div class="empty-text">No products in the cart.</div>
+                                        </div><!-- cart-empty -->
+
+
+                                    </div>
+
+                                    <div class="cart-noticy"> We reduce shipping prices to only 2.49 €!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo-header">
+            <div class="logo">
+                <img src="https://wp.localserverweb.com/sunhillsandpharma/wp-content/uploads/2021/09/logo.png"
+                    alt="logo">
+            </div>
+            <div class="nav-location">
+                <a href="#">
+                    <span class="location-description">Your Location</span>
+                    <div class="current-location">Select a Location</div>
+                </a>
+            </div>
+            <div class="header-search">
+                <div
+                    class="dgwt-wcas-search-wrapp dgwt-wcas-no-submit woocommerce js-dgwt-wcas-layout-classic dgwt-wcas-layout-classic js-dgwt-wcas-mobile-overlay-enabled dgwt-wcas-active">
+                    <form class="dgwt-wcas-search-form" role="search" action="https://klbtheme.com/bacola/"
+                        method="get">
+                        <div class="dgwt-wcas-sf-wrapp">
+                            <svg version="1.1" class="dgwt-wcas-ico-magnifier" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.539 51.361"
+                                enable-background="new 0 0 51.539 51.361" xml:space="preserve">
+                                <path fill="#444"
+                                    d="M51.539,49.356L37.247,35.065c3.273-3.74,5.272-8.623,5.272-13.983c0-11.742-9.518-21.26-21.26-21.26 S0,9.339,0,21.082s9.518,21.26,21.26,21.26c5.361,0,10.244-1.999,13.983-5.272l14.292,14.292L51.539,49.356z M2.835,21.082 c0-10.176,8.249-18.425,18.425-18.425s18.425,8.249,18.425,18.425S31.436,39.507,21.26,39.507S2.835,31.258,2.835,21.082z">
+                                </path>
+                            </svg>
+                            <label class="screen-reader-text" for="dgwt-wcas-search-input-1">Products search</label>
+                            <input id="dgwt-wcas-search-input-1" type="search" class="dgwt-wcas-search-input" name="s"
+                                value="" placeholder="Search for products..." autocomplete="off">
+                            <div class="dgwt-wcas-preloader"></div><input type="hidden" name="post_type"
+                                value="product">
+                            <input type="hidden" name="dgwt_wcas" value="1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+</body>
+
+</html>

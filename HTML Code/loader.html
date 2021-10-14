@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0%;
+        box-sizing: border-box;
+
+    }
+
+    html,
+    body {
+        height: 100vh;
+        width: 100%;
+
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #001d30;
+        /* position: relative; */
+        animation: chnagebg 15s linear infinite;
+    }
+
+    @keyframes chnagebg {
+        to {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    .loader {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(to top, #001d30 40%, #51eeee);
+        border-radius: 50%;
+        animation: loaderRotate 1s linear infinite;
+    }
+
+    @keyframes loaderRotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loader::before {
+        position: absolute;
+        content: '';
+        background: #001d30;
+        border-radius: 50%;
+        inset: 20px 20px 0 0;
+    }
+
+    .loader::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #51eeee;
+        right: -8px;
+        border-radius: 50%;
+        top: 50px;
+        box-shadow: 0 0 5px #51eeee, 0 0 25px #51eeee, 0 0 50px #51eeee, 0 0 75px #51eeee;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="loader"></div>
+    </section>
+</body>
+
+</html>

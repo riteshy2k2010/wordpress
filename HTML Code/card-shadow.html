@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 400px;
+        position: relative;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(315deg, #ffec61, #f321d7);
+    }
+
+    .card:before {
+        position: absolute;
+        content: '';
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(315deg, #ffec61, #f321d7);
+        filter: blur(25px);
+        transform: translateY(30px) scale(0.9);
+    }
+
+    .card h2 {
+        position: relative;
+        color: #fff;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+        </div>
+    </div>
+</body>
+
+</html>

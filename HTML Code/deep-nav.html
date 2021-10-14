@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deep Nav Menu </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  > -->
+</head>
+<style type="text/css">
+	body{
+		background-color: red;
+	}
+.sidenav {
+  height: calc(100% - 60px);
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+   
+}
+.sidenav a{
+
+}
+.sidenav .logo{
+  display: inline-block;
+  position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.sidenav .logo img{
+  height: 40px;
+}
+/*.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+*/
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #fff;
+    text-decoration: none;
+}
+.resNav{
+  font-size:30px;
+  cursor:pointer;
+  color: #fff;
+  position: fixed;
+  right: 10px;
+  top:10px;
+}
+/*********************************/
+/*html, body {
+    font-family: Arial, Helvetica, sans-serif;
+}*/
+
+/* define a fixed width for the entire menu */
+.navigation {
+  width: 300px;
+}
+
+/* reset our lists to remove bullet points and padding */
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.child {
+  position: relative;
+}
+.child ul.submenu a:before{
+  position: absolute;
+  content: '1';
+  top: 10px;
+  right: 0;
+  width:10px;
+  height: 10px;
+  background-color: red;
+
+}
+.mainmenu, .submenu2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* make ALL links (main and submenu) have padding and background color */
+
+.mainmenu a {
+  display: block;
+  background-color: #CCC;
+  text-decoration: none;
+  padding: 10px;
+  color: #000;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    background-color: #C5C5C5;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 200px;
+}
+.mainmenu li:hover .submenu2 {
+  display: block;
+  max-height: 500px;
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  background-color: yellow;
+}
+.submenu2 a {
+  background-color: pink;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: red;
+}
+.submenu2 a:hover {
+  background-color: blue  ;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+.submenu2 {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+body{
+      padding: 0px;
+    }
+    
+ 
+    #menu ul
+    {
+      list-style:none;
+      /*position:relative;
+      float:left;*/
+      margin:0;
+      padding:0;
+    }
+
+    #menu ul a
+    {
+      display:block;
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:18px;
+      line-height:40px;
+      padding:0 15px;
+    }
+
+    #menu ul li
+    {
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0
+    }
+
+    #menu ul li.active
+    {
+      background:#27ae60
+    }
+
+    #menu ul li:hover
+    {
+      /*background:#f6f6f6*/
+      background: #2ecc71;
+    }
+
+    #menu ul ul
+    {
+      display:none;
+     /* position:absolute;*/
+      top:100%;
+      left:0%;
+      background:#27ae60;
+      padding:0
+    }
+
+    #menu ul ul li
+    {
+      float:none;
+      width:200px;
+      border-left: 3px solid #27ae60;
+    }
+    #menu ul ul li:hover{
+      border-left: 3px solid #2c3e50;
+    }
+
+    #menu ul ul a
+    {
+      line-height:120%;
+      padding:10px 15px
+    }
+
+    #menu ul ul ul
+    {
+      top:-4px;
+      left:0%;
+    }
+
+    #menu ul li:hover > ul
+    {
+      display:block
+    }
+    @media screen and (max-width: 1920px){
+    	 
+    	#menu ul li,#menu ul{
+    		float: none;
+    		min-width: 300px;
+    	}
+    }
+</style>
+<body>
+  <header>
+  	<a href="#" class="logo">
+  		<img src="images/logo.png" width="100" alt=""> 
+  	</a>
+  	<span class="resNav" onclick="openNav()">&#9776;</span>
+  		<nav class="sidenav" id="menu">
+			<a href="#" class="logo">
+				<img src="images/logo.png" width="100"  alt=""> 
+			</a>
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		    <ul>
+		      <li class="active"><a href="#">Home</a></li>
+		      <li><a href="#">Menu 1</a>
+		        <ul>
+		          <li><a href="#">Sub Menu 1</a></li>
+		          <li><a href="#">Sub Menu 2</a></li>
+		          <li><a href="#">Sub Menu 3</a></li>
+		          <li><a href="#">Sub Menu 4</a>
+		            <ul>
+		              <li><a href="#">Deep Menu 1</a>
+		                <ul>
+		                  <li><a href="#">Sub Deep 1</a></li>
+		                  <li><a href="#">Sub Deep 2</a></li>
+		                  <li><a href="#">Sub Deep 3</a></li>
+		                  <li><a href="#">Sub Deep 4</a></li>
+		                </ul>
+		              </li>
+		              <li><a href="#">Deep Menu 2</a></li>
+		            </ul>
+		          </li>
+		          <li><a href="#">Sub Menu 5</a></li>
+		        </ul>
+		      </li>
+		      <li><a href="#">Menu 2</a>
+		        <ul>
+		          <li><a href="#">Sub Menu 1</a></li>
+		          <li><a href="#">Sub Menu 2</a></li>
+		          <li><a href="#">Sub Menu 3</a></li>
+		        </ul>
+		      </li>
+		      <li><a href="#">Menu 3</a>
+		        <ul>
+		          <li><a href="#">Sub Menu 1</a></li>
+		          <li><a href="#">Sub Menu 2</a>
+		            <ul>
+		              <li><a href="#">Category 1</a></li>
+		              <li><a href="#">Category 2</a></li>
+		              <li><a href="#">Category 3</a></li>
+		              <li><a href="#">Category 4</a></li>
+		              <li><a href="#">Category 5</a></li>
+		            </ul>
+		          </li>
+		          <li><a href="#">Sub Menu 3</a></li>
+		          <li><a href="#">Sub Menu 4</a></li>
+		          <li><a href="#">Sub Menu 5</a></li>
+		        </ul>
+		      </li>
+		      <li><a href="#">Menu 4</a></li>
+		      <li><a href="#">Menu 5</a></li>
+		      <li><a href="#">Menu 6</a></li>
+		    </ul>
+	  </nav>
+  </header>
+</body>
+<style >
+	
+</style>
+<script>
+function openNav() {
+  document.getElementById("menu").style.width = "300px";
+}
+
+function closeNav() {
+  document.getElementById("menu").style.width = "0";
+}
+</script>
+</html>
